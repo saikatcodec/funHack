@@ -1,0 +1,352 @@
+/**
+ * Import Ubuntu Font from Google Fonts
+**/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/**
+ * Reset All behavior of the website
+ * Such as margin, padding, etc.
+ * Add font
+**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/**
+ * Set height, width of main body is full Screen
+ * Set Background Color,
+ * And centered all elements using flexbox
+**/
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #37474F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**
+ * Its a container under body
+ * And design uniquely
+**/
+.container {
+    height: 90%;
+    width: 90%;
+    border: 0.02rem solid white;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+/**
+ * Its only for captcha section
+**/
+.captcha {
+    width: 90%;
+    height: 5rem;
+    border: 0.02rem solid white;
+    border-radius: 0.2rem;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/**
+ * Its a checkbox for checking you are robot or not
+ * Disable default appearance
+ * And Set customize icon in checkbox
+**/
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/**
+ * Use before psude elements
+ * To set customize icon from
+ * Font Awesome 5 free icon
+**/
+input[type="checkbox"]::before {
+    content: '\f007';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+/**
+ * While checkbox are checked
+ * Then this design are applied
+**/
+input[type="checkbox"]:checked::before {
+    content: '\f4fc';
+    color: #76FF03;
+    transition: 0.5s;
+}
+
+/**
+ * Its a button section container
+ * Where are "Let's Go" button stayed
+**/
+.btnSec {
+    width: 95%;
+    height: 2.5rem;
+    margin: auto;
+}
+
+/**
+ * Design "Let's Go" button uniquely
+**/
+.btn {
+    width: 100%;
+    height: 100%;
+    background: #00C853;
+    border: 0.02rem solid #00C853;
+    border-radius: 0.2rem;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    font-size: 1.01rem;
+}
+
+/**
+ * Its for Button hover effect
+**/
+.btn:hover::before {
+    content: '';
+    border: 0.3rem solid #00C853;
+    position: absolute;
+    top: -0.32rem;
+    left: -0.32rem;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    border-radius: 0.2rem;
+}
+
+/**
+ * Dialogue for creating dialogue box layout
+**/
+.dialogue {
+    position: absolute;
+    background: #546E7A;
+    width: 17rem;
+    height: 12rem;
+    border: 0.02rem solid white;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    box-shadow: 0 1px 9px black;
+    /*display: none;*/
+    z-index: 999;
+}
+
+/**
+ * Alert Dialogue Box
+ * With wonderful design
+**/
+.alert {
+    display: none;
+}
+
+/**
+ * Dialogue box has two parts
+ * Its a one parts
+ * Alert head contains warning icon
+ * And dismiss button
+**/
+.alert_head {
+    padding: 0.5rem;
+    background: #455A64;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**
+ * Set up animation in warning text
+**/
+.wrning {
+    animation: alert1.5s infinite;
+}
+
+/**
+ * Create animation how text animate
+**/
+@keyframes alert {
+    from {
+        color: white;
+    }
+
+    to {
+        color: #FFEE58;
+        font-weight: bold;
+    }
+}
+
+/**
+ * Customize set up (width x height) of warning icon
+**/
+.alert_head img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/**
+ * Design alert dismiss button
+**/
+.alert_head #crossBtn {
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+}
+
+/**
+ * Container for alert icon and warning text
+**/
+.icon_info {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/**
+ * Body of alert Dialogue box
+**/
+.alert_body {
+    width: 100%;
+    height: 70%;
+    padding: 0.5rem;
+}
+
+/**
+ * Set work for warning message
+**/
+.warning_msg {
+    display: none;
+}
+
+/**
+ * Set work for alert main messages
+**/
+.sock_msg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    display: none;
+}
+
+/**
+ * Heading of sock message
+**/
+.sock_msg h3 {
+    text-transform: capitalize;
+}
+
+/**
+ * Container of progress bar
+**/
+.progress {
+    width: 100%;
+    height: 2rem;
+    background: #455A64;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+/**
+ * Create progress bar
+ * Animate them
+**/
+.progress_bar {
+    width: 0%;
+    height: 100%;
+    background: #37474F;
+    animation: transfer 30s forwards;
+}
+
+/**
+ * Create animation for process bar
+**/
+@keyframes transfer {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/**
+ * Add success icon 
+ * And add custom design
+**/
+.success_icon {
+    width: 100%;
+    height: 70%;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00C853;
+}
+
+/**
+ * Add success message 
+ * And add custom design
+**/
+.success_msg {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/**
+ * Effect of success message
+**/
+.success {
+    display: none;
+}
+
+/**
+ * Texts are hidden from box
+**/
+.success_txt {
+    display: none;
+}
+
+/**
+ * Mazak img's width and height are set.
+**/
+.success_img {
+    width: 100%;
+    height: 100%;
+}

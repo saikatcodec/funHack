@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
+    <title>funHack</title>
+</head>
+<body>
+
+    <!--Main webpage container-->
+    <div class="container">
+        <div class="title">
+            Before Browsing This URL, You Need To Test Yourself.
+        </div>
+
+        <div class="captcha">
+            <input type="checkbox" name="check" id="check" />
+            <span>I'm not Robot</span>
+        </div>
+
+        <div class="btnSec">
+            <button class="btn">Let's Go</button>
+        </div>
+
+    </div>
+
+    <!--Alert Dialogue box-->
+    <div class="alert dialogue">
+        <div class="alert_head">
+            <div class="icon_info">
+                <span><img src="./images/warning.png" alt="Warning" /></span>
+                <span class="wrning">Warning</span>
+            </div>
+            <button id="crossBtn">&times;</button>
+        </div>
+        <div class="alert_body">
+            <div class="warning_msg">
+                You must need to select "I'm not robot" checkbox
+            </div>
+
+            <div class="sock_msg">
+                <h3>You are hacked</h3>
+                <h5>Data is transferring...</h5>
+                <div class="progress">
+                    <div class="progress_bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Success Dialogue box-->
+    <div class="success dialogue">
+        <div class="success_txt">
+            <div class="success_icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="success_msg">
+                <div>
+                    Hey! Are you afraid?
+                </div>
+                <div>
+                    I am Joking.
+                </div>
+            </div>
+        </div>
+        <div class="success_img">
+            <img class="success_img" src="./images/mazak.jpeg" alt="Kasa laga mera mazak" />
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
